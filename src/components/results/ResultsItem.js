@@ -10,18 +10,8 @@ export const ResultsItem = ({
     percentageDirection = 'up'
 }) => {
 
-    console.log(metric)
-
     return (
         <Wrapper>
-            {/* {metric &&
-                <Percentage>
-                    <Arrow direction={percentageDirection} width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.375 0.5L30 30.5H0L15.375 0.5Z" fill="#00D3A1"/>
-                    </Arrow>
-                    {metric + `%`}
-                </Percentage>
-            } */}
             {metric &&
                 <Percentage>
                     <H1 color='var(--color-success-main)' margin='0'>{metric}</H1>
