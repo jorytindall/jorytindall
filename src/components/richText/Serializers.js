@@ -1,7 +1,7 @@
 import React from 'react'
 import { H1, H2, H3, H4, H5, H6, Paragraph } from "../typography"
 import ResolvedLink from "./ResolvedLink"
-import { Blockquote } from "../../components/blockquote"
+import { Blockquote } from "../blockquote"
 
 const Serializers = {
     types: {
@@ -14,7 +14,7 @@ const Serializers = {
                 case `h5`: return <H5>{children}</H5>
                 case `h6`: return <H6>{children}</H6>
                 case `normal`: return <Paragraph primary>{children}</Paragraph>
-                case `blockquote`: return <Blockquote>{children}</Blockquote>
+                case `blockquote`: return <Blockquote text={children} />
                 default: return <Paragraph primary>{children}</Paragraph>
             }
         },

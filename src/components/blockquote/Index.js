@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Blockquote = ({ children }) => {
+export const Blockquote = ({ text }) => {
     return (
         <Wrapper>
             <StyledBlockquote>
-                "{children}"
+                "{text}"
             </StyledBlockquote>
         </Wrapper>
     )
