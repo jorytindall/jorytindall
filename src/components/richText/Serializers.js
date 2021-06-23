@@ -1,7 +1,7 @@
 import React from 'react'
 import { H1, H2, H3, H4, H5, H6, Paragraph } from "../typography"
 import ResolvedLink from "./ResolvedLink"
-import { Blockquote } from "../blockquote"
+import { Blockquote } from '../blockquote'
 
 const Serializers = {
     types: {
