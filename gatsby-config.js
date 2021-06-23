@@ -64,6 +64,5 @@ module.exports = {
                 cookieDomain: `https://jorytindall.com`
             }
         },
-        `gatsby-theme-stitches`,
     ]
 }
