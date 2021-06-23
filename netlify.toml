@@ -1,0 +1,21 @@
+[build]
+    base = "/"
+    publish = "public/"
+
+[[plugins]]
+    package = "netlify-plugin-gatsby-cache"
+
+[[plugins]]
+    package = "netlify-plugin-submit-sitemap"
+
+    [plugins.inputs]
+        baseUrl = "https://jorytindall.com"
+        sitemapPath = "/sitemap.xml"
+        providers = [
+            "google",
+            "bing",
+            "yandex"
+        ]
+
+[[plugins]]
+    package = "@netlify/plugin-lighthouse"
