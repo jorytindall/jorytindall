@@ -4,9 +4,10 @@ import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
 import { Layout } from "../components/layout"
 import { H2, H4, Paragraph, AnimatedHeadline } from "../components/typography"
+import { TextArrow } from "../components/button"
 
 // Local
-import { HeroContent, MainContent, Features } from "../components/home"
+import { HeroContent, MainContent } from "../components/home"
 
 const Homepage = () => {
     const data = useStaticQuery(
@@ -33,8 +34,8 @@ const Homepage = () => {
     const skills = [
         `Visual design,`,
         `user experience,`,
-        `musician,`,
         `design systems,`,
+        `creative music,`,
         `video & motion,`,
         `brand expression.`
     ]
@@ -51,15 +52,23 @@ const Homepage = () => {
                 </HeroContent>
             </StyledBackground>
             <MainContent>
-                <H2 color="var(--color-primary-main)">Jory Tindall.</H2>
-                <H4 color="var(--color-primary-main)">Empathetic interface and experience designer, polished video editor and motion designer, shredder of the saxophone, and entrepreneur based in Seattle, WA.</H4>
+                <H2 color="var(--color-primary-main)">Hey 🤘 My name is Jory Tindall.</H2>
+                <H4 color="var(--color-primary-main)">I'm an empathetic interface and experience designer, polished video editor and motion designer, shredder of the saxophone, and entrepreneur based in Seattle, WA.</H4>
                 <Paragraph>I'm currently building the <strike>next</strike> first platform enabling marketing teams to know what works and why across marketing channels at <a href="https://byjove.com" target="blank">Jove</a>.</Paragraph>
                 <Paragraph>You'll also find me leading the charge to democratize music education at <a href="https://downbeatacademy.com" target="blank">Downbeat Academy</a>, collaborating in the Seattle music scene, and teaching teaching music to the next generation of shredders.</Paragraph>
+                <TextArrow
+                    text='View my portfolio'
+                    link='/portfolio'
+                />
+                <TextArrow
+                    text='Read recent blog posts'
+                    link='/blog'
+                />
             </MainContent>
-            <Features />
+            {/* <Features /> */}
             <MainContent>
-                <H2 color="var(--color-primary-main)" textAlign="center">Want to know more?</H2>
-                <Paragraph textAlign="center"><Link to="/contact">Drop me a line,</Link> I'm always looking to meet new people and start up new collaborations.</Paragraph>
+                <H2 color="var(--color-primary-main)">Want to know more?</H2>
+                <Paragraph><Link to="/contact">Drop me a line,</Link> I'm always looking to meet new people and start up new collaborations.</Paragraph>
             </MainContent>
         </Layout>
     )
@@ -67,7 +76,8 @@ const Homepage = () => {
 
 const StyledBackground = styled(BackgroundImage)`
     width: 100%;
-    height: calc(100vh - 250px);
+    height: calc(100vh - 107px);
+    transform: translateY(-107px);
 `
 
 export default Homepage

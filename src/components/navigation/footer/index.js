@@ -1,18 +1,43 @@
 import React from 'react'
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import styled from 'styled-components'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 // Components
-import { LogoSymbol } from "../../brand"
 import { Paragraph, InternalLink, ExternalLink } from "../../typography"
 
 const Footer = () => {
+
+    const data = useStaticQuery(graphql`
+        {
+            file( relativePath: { eq: "avatar-logo.png"}) {
+                childImageSharp {
+                    gatsbyImageData(
+                        width: 60,
+                        height: 60,
+                        placeholder: DOMINANT_COLOR,
+                        layout: FIXED,
+                        quality: 90,
+                        formats: [ AUTO, WEBP ]
+                    )
+                }
+            }
+        }        
+    `)
+    
     return (
         <Wrapper>
             <Content>
                 <div>
                     <Link to="/">
-                        <LogoSymbol color="#005EFF" maxWidth="38px" />
+                        <StyledGatsbyImage
+                            image={data.file.childImageSharp.gatsbyImageData}
+                            alt="Logo"
+                            width={60}
+                            height={60}
+                            layout="fixed"
+                            placeholder="blurred"
+                        />
                     </Link>
                     <Paragraph margin="1rem 0 0 0">Copyright &copy; Jory Tindall {new Date().getFullYear()}</Paragraph>
                 </div>
@@ -75,4 +100,11 @@ const Content = styled.div`
             margin-bottom: 2.5rem;
         }
     }
+`
+
+const StyledGatsbyImage = styled(GatsbyImage)`
+    box-shadow: 0px 0px 12px rgba(22, 15, 41, 0.15);
+    border-radius: 50%;
+    border: 3px solid var(--color-primary-main);
+    cursor: url("/emojis/cool.png"), pointer;
 `

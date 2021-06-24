@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 const MainContent = styled.section`
     width: 100vw;
-    background: var(--color-accent-01);
-    padding: 5rem 1rem;
+    background: var(--color-tertiary-light-tint);
+    padding: 2.5rem 1rem;
     display: grid;
     grid-template-columns: 1fr min(75ch, 100%) 1fr;
 
