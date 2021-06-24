@@ -60,10 +60,6 @@ const Homepage = () => {
                     text='View my portfolio'
                     link='/portfolio'
                 />
-                <TextArrow
-                    text='Read recent blog posts'
-                    link='/blog'
-                />
             </MainContent>
             {/* <Features /> */}
             <MainContent>
