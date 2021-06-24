@@ -43,6 +43,11 @@ export const query = graphql`
             externalLink
             id
             roles
+            shareImage {
+                asset {
+                    url
+                }
+            }
             slug {
                 current
             }

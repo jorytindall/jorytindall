@@ -15,6 +15,7 @@ const Seo = ({ data }) => {
             <title>{data.title}</title>
             <meta name="application-name" content="Jory Tindall | Designer, musician, educator" />
             <meta name="description" content={data.description || "Designer, musician, and educator Jory Tindall."} />
+            {data.shareImage && <meta property="og:image" content={data.shareImage.asset.url} />}
         </Helmet>
     )
 }
