@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Helmet } from 'react-helmet'
 
 // Components
 import { Layout } from "../../components/layout"
@@ -10,6 +11,9 @@ const Portfolio = ({ data }) => {
     const project = data.project
     return (
         <Layout seo={project}>
+            <Helmet>
+                <meta property="og:image" content={project.shareImage.asset.url} />
+            </Helmet>
             <HeroImage 
                 source={project.featuredImage.asset.gatsbyImageData}
                 altText={project.featuredImage.alternativeText}
