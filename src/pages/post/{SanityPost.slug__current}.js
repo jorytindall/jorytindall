@@ -4,14 +4,15 @@ import { graphql } from 'gatsby'
 // Components
 import { Layout }from "../../components/layout"
 import { H1 } from "../../components/typography"
-import { ModuleRenderer } from '../../components/moduleRenderer/ModuleRenderer'
+import { PortableText } from '../../components/richText'
 
 const Post = ({ data }) => {
     const post = data.post
+
     return (
-        <Layout>
+        <Layout seo={post}>
             <H1>{post.title}</H1>
-            {post.moduleContent &&  <ModuleRenderer modules={post.modulecontent} />}
+            {post.content && <PortableText blocks={post.content} />}
         </Layout>
     )
 }
@@ -21,12 +22,22 @@ export default Post
 export const query = graphql`
     query PostQuery($id: String!) {
         post: sanityPost(id: { eq: $id }) {
-            title
+            _key
             id
+            title
+            publishedDate
+            content {
+                _rawContent(resolveReferences: { maxDepth: 5 })
+            }
+            featuredImage {
+                alternativeText
+                asset {
+                    gatsbyImageData
+                }
+            }
             slug {
                 current
             }
-            publishedDate
         }
     }
 `

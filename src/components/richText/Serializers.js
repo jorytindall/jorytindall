@@ -2,6 +2,8 @@ import React from 'react'
 import { H1, H2, H3, H4, H5, H6, Paragraph } from "../typography"
 import ResolvedLink from "./ResolvedLink"
 import { Blockquote } from '../blockquote'
+import { CodeBlock } from '../code'
+import { InlineImage } from '../image/InlineImage'
 
 const Serializers = {
     types: {
@@ -18,6 +20,12 @@ const Serializers = {
                 default: return <Paragraph primary>{children}</Paragraph>
             }
         },
+        codeBlock: ({ node }) => {
+            return <CodeBlock input={node} key={node._key} />
+        },
+        mainImage: ({ node }) => {
+            return <InlineImage input={node} key={node._key} />
+        }
     },
     marks: {
         internalLink: ({ mark, children }) => {

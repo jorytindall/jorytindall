@@ -38,19 +38,6 @@ export const query = graphql`
                 ... on SanityRichText {
                     _key
                     _type
-                    alignment
-                    textColor {
-                        colors {
-                            title
-                            value
-                        }
-                    }
-                    backgroundColor {
-                        colors {
-                            title
-                            value
-                        }
-                    }
                     _rawContent(resolveReferences: { maxDepth: 5 })
                 }
                 ... on SanityPortfolioList {
