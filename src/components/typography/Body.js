@@ -64,4 +64,11 @@ const ExternalLink = styled.a`
     &:active { color: ${props => props.active || `var(--color-primary-shade)` }};
 `
 
-export { Paragraph, UL, OL, InternalLink, ExternalLink }
+const Code = styled.code`
+    background: var(--color-tertiary-main);
+    color: var(--color-tertiary-shade);
+    padding: 0.25rem 0.5rem;
+    font-family: var(--font-monospace);
+`
+
+export { Paragraph, UL, OL, InternalLink, ExternalLink, Code }

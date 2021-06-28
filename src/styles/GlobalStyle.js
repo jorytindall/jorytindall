@@ -42,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
 
         --font-body: Neue Haas Unica, Helvetica, Arial, sans-serif;
         --font-headline: Uxum Grotesque, Helvetica, Aria, sans-serif;
+        --font-monospace: Fira Code, courier, monospace;
 
         --breakpoint-xs: 350px;
         --breakpoint-sm: 500px;
@@ -109,6 +110,14 @@ const GlobalStyle = createGlobalStyle`
             url(${Fonts.NeueHaasUnicaProItalicWOFF2}) format("woff2");
     }
 
+    @font-face {
+        font-family: "Fira Code";
+        font-weight: normal;
+        font-style: normal;
+        src: url(${Fonts.FiraCodeRegularWOFF}) format("woff"),
+            url(${Fonts.FiraCodeRegularWOFF2}) format("woff2");
+    }
+
     body {
         margin: 0;
         padding: 0;
@@ -120,7 +129,6 @@ const GlobalStyle = createGlobalStyle`
         li {
             padding: 0.5rem 0 0.5rem 0.5rem;
             line-height: 1.7;
-            /* list-style-image: url("/arrow-right.svg"); */
             list-style-position: outside;
         }
     }
