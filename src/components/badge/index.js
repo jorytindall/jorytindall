@@ -12,12 +12,21 @@ export const Badge = ({
 
 const Wrapper = styled.span`
     padding: 4px 16px;
-    background: var(--color-secondary-light-tint);
-    color: var(--color-secondary-dark-shade);
     font-family: var(--font-headline);
     font-size: 1rem;
     line-height: 1.7;
     font-weight: 600;
     border-radius: 4px;
     letter-spacing: 0.25px;
+
+    ${props => props.type === 'primary' ? `
+        background: var(--color-secondary-light-tint);
+        color: var(--color-secondary-dark-shade);
+    ` : props.type === 'secondary' ? `
+        background: var(--color-tertiary-medium-tint);
+        color: var(--color-tertiary-dark-shade);
+    ` : `
+        background: var(--color-secondary-light-tint);
+        color: var(--color-secondary-dark-shade);
+    `}
 `

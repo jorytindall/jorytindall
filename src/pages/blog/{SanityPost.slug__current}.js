@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 // Components
 import { Layout }from "../../components/layout"
-import { H1 } from "../../components/typography"
+import { BlogTitle } from "../../components/blog/BlogTitle"
 import { PortableText } from '../../components/richText'
 
 const Post = ({ data }) => {
@@ -11,7 +11,11 @@ const Post = ({ data }) => {
 
     return (
         <Layout seo={post}>
-            <H1>{post.title}</H1>
+            <BlogTitle
+                featuredImage={post.featuredImage}
+                title={post.title}
+                categories={post.categories}
+            />
             {post.content && <PortableText blocks={post.content} />}
         </Layout>
     )
@@ -26,13 +30,22 @@ export const query = graphql`
             id
             title
             publishedDate
+            categories {
+                name
+            }
             content {
                 _rawContent(resolveReferences: { maxDepth: 5 })
             }
             featuredImage {
                 alternativeText
                 asset {
-                    gatsbyImageData
+                    gatsbyImageData(
+                        width: 480
+                        height: 270
+                        placeholder: BLURRED
+                        formats: [ AUTO, WEBP ]
+                        layout: CONSTRAINED
+                    )
                 }
             }
             slug {
@@ -41,3 +54,4 @@ export const query = graphql`
         }
     }
 `
+

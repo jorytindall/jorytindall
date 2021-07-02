@@ -14,6 +14,7 @@ const Wrapper = styled(motion.main)`
     display: flex;
     flex-direction: column;    
     gap: 0;
+    padding-bottom: 2.5rem;
 
     @media (max-width: 1000px) {
         padding-top: 2.5rem;
