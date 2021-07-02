@@ -45,6 +45,7 @@ const Overlay = ({ overlay }) => {
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/about">About</NavLink>
                 <NavLink to="/portfolio/">Portfolio</NavLink>
+                <NavLink to="/blog">Blog</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
             </LinkWrapper>
             <FeaturedWrapper>

@@ -44,6 +44,7 @@ const Footer = () => {
                 <div>
                     <InternalLink to="/about" margin="16px 0" color="var(--color-dark-main)">About</InternalLink>
                     <InternalLink to="/portfolio" margin="16px 0" color="var(--color-dark-main)">Portfolio</InternalLink>
+                    <InternalLink to="/blog" margin="16px 0" color="var(--color-dark-main)">Blog</InternalLink>
                     <InternalLink to="/contact" margin="16px 0" color="var(--color-dark-main)">Contact</InternalLink>
                 </div>
                 <div>
