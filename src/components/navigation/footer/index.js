@@ -53,6 +53,7 @@ const Footer = () => {
                     <ExternalLink href="https://www.facebook.com/jorytindall.musician" margin="16px 0" color="var(--color-dark-main)">Facebook</ExternalLink>
                     <ExternalLink href="https://www.instagram.com/jorytindall/" margin="16px 0" color="var(--color-dark-main)">Instagram</ExternalLink>
                     <ExternalLink href="https://twitter.com/JoryTindall" margin="16px 0" color="var(--color-dark-main)">Twitter</ExternalLink>
+                    <ExternalLink href="https://www.github.com/jorytindall" margin="16px 0" color="var(--color-dark-main)">GitHub</ExternalLink>
                 </div>
             </Content>
         </Wrapper>
@@ -92,11 +93,12 @@ const Content = styled.div`
         flex-direction: column;
     }
 
-    @media (max-width: var(--breakpoint-lg)) {
+    @media (max-width: 1200px) {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
             "copyright copyright"
             "col1 col2";
+        padding: 2.5rem 1rem;
         div:nth-child(1) {
             margin-bottom: 2.5rem;
         }
