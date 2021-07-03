@@ -98,6 +98,24 @@ export const query = graphql`
                         }
                     }
                 }
+                ...on SanityGallery {
+                    _key
+                    _type
+                    columns
+                    images {
+                        _key
+                        caption
+                        alternativeText
+                        asset {
+                            _key
+                            gatsbyImageData(
+                                width: 2000,
+                                placeholder: BLURRED,
+                                fit: FILLMAX,
+                            )                            
+                        }
+                    }
+                }
             }
         }
     }

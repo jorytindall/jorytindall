@@ -11,14 +11,11 @@ export default function Container({ children }) {
 
 const Wrapper = styled.div`
     padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr min(75ch, 100%) 1fr;
 
-    & > div {
-        display: grid;
-        grid-template-columns: 1fr min(75ch, 100%) 1fr;
-
-        > * {
-            grid-column: 2;
-        }
+    > * {
+        grid-column: 2;
     }
 
 `
