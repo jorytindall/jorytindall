@@ -33,8 +33,6 @@ const Wrapper = styled.section`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
     gap: 5rem;
-    /* max-width: 1600px;
-    margin: 0 auto; */
 
     @media (max-width: 1400px) {
         gap: 2.5rem;
@@ -45,9 +43,9 @@ const Wrapper = styled.section`
         padding: 2.5rem 1rem;
     }
 
-    /* @media (max-width: 700px) {
+    @media (max-width: 700px) {
         grid-template-columns: 1fr;
-    } */
+    }
 `
 
 const ItemWrapper = styled.article`
@@ -57,10 +55,6 @@ const ItemWrapper = styled.article`
 
     &:hover {
         transform: translateY(-0.5rem);
-    }
-
-    @media (max-width: 600px) {
-        margin: 1rem;
     }
 `
 
