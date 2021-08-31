@@ -54,7 +54,7 @@ const Homepage = () => {
             <MainContent>
                 <H2 color="var(--color-primary-main)">Hey 🤘 My name is Jory Tindall.</H2>
                 <H4 color="var(--color-primary-main)">I'm an empathetic interface and experience designer, polished video editor and motion designer, shredder of the saxophone, and entrepreneur based in Seattle, WA.</H4>
-                <Paragraph>I'm currently building the <strike>next</strike> first platform enabling marketing teams to know what works and why across marketing channels at <a href="https://byjove.com" target="blank">Jove</a>.</Paragraph>
+                <Paragraph>I'm currently helping to empower a broad range of designers and creative thinkers on the Design Systems and Framework team at <a href="https://www.t-mobile.com/" target="blank">T-Mobile</a>.</Paragraph>
                 <Paragraph>You'll also find me leading the charge to democratize music education at <a href="https://downbeatacademy.com" target="blank">Downbeat Academy</a>, collaborating in the Seattle music scene, and teaching teaching music to the next generation of shredders.</Paragraph>
                 <TextArrow
                     text='View my portfolio'
