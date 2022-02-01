@@ -24,6 +24,7 @@
     "framer-motion": "^4.1.17",
     "gatsby": "^3.8.0",
     "gatsby-background-image": "^1.5.3",
+    "gatsby-plugin-fathom": "^2.1.1",
     "gatsby-plugin-google-analytics": "^3.8.0",
     "gatsby-plugin-google-tagmanager": "^3.8.0",
     "gatsby-plugin-image": "^1.8.0",

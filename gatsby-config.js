@@ -64,5 +64,12 @@ module.exports = {
                 cookieDomain: `https://jorytindall.com`
             }
         },
+        {
+            resolve: `gatsby-plugin-fathom`,
+            options: {
+                trackingUrl: `jorytindall.com`,
+                siteId: process.env.FATHOM_TRACKING_ID,
+            }
+        }
     ]
 }
