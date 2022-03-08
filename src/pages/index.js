@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
 import { Layout } from "../components/layout"
 import { H2, H4, Paragraph, AnimatedHeadline } from "../components/typography"
@@ -42,7 +41,7 @@ const Homepage = () => {
 
     return (
         <Layout seo={seo}>
-            <StyledBackground fluid={imageData} backgroundColor="var(--color-primary-main)">
+            {/* <StyledBackground fluid={imageData} backgroundColor="var(--color-primary-main)">
                 <HeroContent>
                     <div>
                         {skills.map(skill => {
@@ -50,7 +49,7 @@ const Homepage = () => {
                         })}
                     </div>
                 </HeroContent>
-            </StyledBackground>
+            </StyledBackground> */}
             <MainContent>
                 <H2 color="var(--color-primary-main)">Hey 🤘 My name is Jory Tindall.</H2>
                 <H4 color="var(--color-primary-main)">I'm an empathetic interface and experience designer, polished video editor and motion designer, shredder of the saxophone, and entrepreneur based in Seattle, WA.</H4>

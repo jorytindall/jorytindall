@@ -50,21 +50,6 @@ module.exports = {
             }
         },
         {
-            resolve: `gatsby-plugin-google-tagmanager`,
-            options: {
-                id: `GTM-MCSJ6KZ`,
-                includeInDevelopment: false,
-                defaultDataLayer: { platform: `gatsby` },
-            }
-        },
-        {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                trackingId: `UA-138718160-2`,
-                cookieDomain: `https://jorytindall.com`
-            }
-        },
-        {
             resolve: `gatsby-plugin-fathom`,
             options: {
                 trackingUrl: `jorytindall.com`,

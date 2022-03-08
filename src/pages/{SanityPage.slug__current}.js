@@ -52,16 +52,16 @@ export const query = graphql`
                                 current
                             }
                             featuredImage {
-                                    alternativeText
-                                    asset {
-                                        gatsbyImageData(
-                                            layout: CONSTRAINED,
-                                            placeholder: DOMINANT_COLOR,
-                                            fit: FILL,
-                                        )
-                                    }
+                                alternativeText
+                                asset {
+                                    gatsbyImageData(
+                                        layout: CONSTRAINED,
+                                        placeholder: DOMINANT_COLOR,
+                                        fit: FILL,
+                                    )
                                 }
                             }
+                        }
                     }
                 }
                 ... on SanityForm {
