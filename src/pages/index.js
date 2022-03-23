@@ -41,15 +41,13 @@ const Homepage = () => {
 
     return (
         <Layout seo={seo}>
-            {/* <StyledBackground fluid={imageData} backgroundColor="var(--color-primary-main)">
-                <HeroContent>
-                    <div>
-                        {skills.map(skill => {
-                            return (<AnimatedHeadline color="var(--color-primary-main)" margin="0" lineHeight="1" textAlign="left">{skill}</AnimatedHeadline>)
-                        })}
-                    </div>
-                </HeroContent>
-            </StyledBackground> */}
+            <HeroContent>
+                <div>
+                    {skills.map(skill => {
+                        return (<AnimatedHeadline color="var(--color-primary-main)" margin="0" lineHeight="1" textAlign="left">{skill}</AnimatedHeadline>)
+                    })}
+                </div>
+            </HeroContent>
             <MainContent>
                 <H2 color="var(--color-primary-main)">Hey 🤘 My name is Jory Tindall.</H2>
                 <H4 color="var(--color-primary-main)">I'm an empathetic interface and experience designer, polished video editor and motion designer, shredder of the saxophone, and entrepreneur based in Seattle, WA.</H4>
@@ -68,11 +66,5 @@ const Homepage = () => {
         </Layout>
     )
 }
-
-const StyledBackground = styled(BackgroundImage)`
-    width: 100%;
-    height: calc(100vh - 107px);
-    transform: translateY(-107px);
-`
 
 export default Homepage
