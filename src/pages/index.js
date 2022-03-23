@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import styled from 'styled-components'
 import { Layout } from "../components/layout"
 import { H2, H4, Paragraph, AnimatedHeadline } from "../components/typography"
 import { TextArrow } from "../components/button"

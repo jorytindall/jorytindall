@@ -17,4 +17,5 @@ const Wrapper = styled.a`
     font-size: 1rem;
     font-weight: 400;
     line-height: 1rem;
+    
 `
