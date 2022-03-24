@@ -9,15 +9,15 @@ import { PortableText } from '../../components/richText'
 import { TextArrow } from '../../components/button'
 
 const Event = ({ data }) => {
-    const event = data.event
+    const {title, image, date, description, url} = data.event
     return (
-        <Layout seo={event}>
+        <Layout seo={data.event}>
             <Container>
-                <GatsbyImage image={event.image.asset.gatsbyImageData} />
-                <H1>{event.title}</H1>
-                <Paragraph>{formatDateTime(event.date)}</Paragraph>
-                <PortableText blocks={event.description} />
-                <TextArrow text='More information' link={event.url} />
+                {image && <GatsbyImage image={image.asset.gatsbyImageData} />}
+                {title && <H1>{title}</H1>}
+                {date && <Paragraph>{formatDateTime(date)}</Paragraph>}
+                {description && <PortableText blocks={description} />}
+                {url && <TextArrow text='More information' link={url} />}
             </Container>
         </Layout>
     )
@@ -28,6 +28,7 @@ export default Event
 export const query = graphql`
     query EventQuery($id: String!) {
         event: sanityEvent(id: { eq: $id }) {
+            _id
             slug {
                 current
             }
