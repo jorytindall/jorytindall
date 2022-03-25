@@ -29,6 +29,11 @@ const Wrapper = styled.article`
     &:hover {
         cursor: pointer;
         transform: translateY(-4px);
+        background: var(--color-primary-main);
+        
+        & a > * {
+            color: var(--color-accent-01);
+        }
     }
 
     a {

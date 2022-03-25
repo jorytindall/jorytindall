@@ -17,9 +17,9 @@ const Homepage = () => {
         <Layout seo={seo}>
             <MainContent>
                 <H2 color="var(--color-primary-main)">Hey 🤘 My name is Jory Tindall.</H2>
-                <H4 color="var(--color-primary-main)">I'm an empathetic interface and experience designer, polished video editor and motion designer, shredder of the saxophone, and entrepreneur based in Seattle, WA.</H4>
-                <Paragraph>I'm currently helping to empower a broad range of designers and creative thinkers on the Design Systems and Framework team at <a href="https://www.t-mobile.com/" target="blank">T-Mobile</a>.</Paragraph>
-                <Paragraph>You'll also find me leading the charge to democratize music education at <a href="https://downbeatacademy.com" target="blank">Downbeat Academy</a>, collaborating in the Seattle music scene, and teaching teaching music to the next generation of shredders.</Paragraph>
+                <H4 color="var(--color-primary-main)">I'm an empathetic interface and experience designer with passions for system-thinking and design systems, design technology, and shredding the saxophone. I'm currently based in Seattle, Washington.</H4>
+                <Paragraph>I'm currently helping to empower a broad range of designers and creative thinkers on the Global Design System team at <a href="https://www.t-mobile.com/" target="blank">T-Mobile</a>.</Paragraph>
+                <Paragraph>You can also find me leading the charge to democratize music education at <a href="https://downbeatacademy.com" target="blank">Downbeat Academy</a>, collaborating in the Seattle music scene, and teaching teaching music to the next generation of shredders.</Paragraph>
                 <TextArrow
                     text='View my portfolio'
                     link='/portfolio'

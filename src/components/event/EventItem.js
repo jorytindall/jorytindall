@@ -19,7 +19,7 @@ const Wrapper = styled(Link)`
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    background: var(--color-tertiary-main);
+    background: var(--color-tertiary-medium-tint);
     padding: 2rem;
     text-decoration: none;
     transition: all 0.1s ease-in-out;
@@ -27,6 +27,7 @@ const Wrapper = styled(Link)`
     &:hover {
         background: var(--color-primary-main);
         transform: translateY(-4px);
+
         & > * {
             color: var(--color-accent-01);
         }
