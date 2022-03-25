@@ -26,6 +26,7 @@ const Overlay = ({ overlay }) => {
                             }
                         }
                         _key
+                        _id
                         client
                         title
                         slug {
@@ -54,7 +55,7 @@ const Overlay = ({ overlay }) => {
                     {data.allSanityPortfolioProject.edges.map(project => {
                         return (
                             <FeaturedItem
-                                key={project.node._key}
+                                key={project.node._id}
                                 title={project.node.title}
                                 client={project.node.client}
                                 image={project.node.featuredImage.asset.gatsbyImageData}

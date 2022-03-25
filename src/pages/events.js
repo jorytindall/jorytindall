@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import { formatDateTime } from '../utils/datetimeFormat'
 import { Layout } from '../components/layout'
 import { EventItem } from '../components/event'
 import { PageTitle } from '../components/pageTitle'
@@ -36,7 +35,7 @@ const Events = () => {
             <EventWrapper>
                 {events.map(event => {
                     return (
-                        <EventItem input={event.node} key={event.node._key} />
+                        <EventItem input={event.node} key={event.node._id} />
                     )
                 })}        
             </EventWrapper>
