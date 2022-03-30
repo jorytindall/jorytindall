@@ -52,8 +52,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-fathom`,
             options: {
-                trackingUrl: `jorytindall.com`,
-                siteId: 'PABJFBEA',
+                siteId: process.env.FATHOM_TRACKING_ID,
             }
         }
     ]
