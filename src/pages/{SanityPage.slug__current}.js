@@ -4,6 +4,7 @@ import { Layout } from "../components/layout"
 import { ModuleRenderer } from "../components/moduleRenderer/ModuleRenderer"
 import { PageTitle } from "../components/pageTitle"
 import { H1 } from "../components/typography"
+// import { moduleContentQuery } from '../lib/fragments'
 
 const Page = ({ data }) => {
     const page = data.page
@@ -36,85 +37,16 @@ export const query = graphql`
             }
             moduleContent {
                 ... on SanityRichText {
-                    _key
-                    _type
-                    _rawContent(resolveReferences: { maxDepth: 5 })
+                    ...RichText
                 }
                 ... on SanityPortfolioList {
-                    _key
-                    _type
-                    items {
-                        item {
-                            _key
-                            title
-                            client
-                            slug {
-                                current
-                            }
-                            featuredImage {
-                                alternativeText
-                                asset {
-                                    gatsbyImageData(
-                                        layout: CONSTRAINED,
-                                        placeholder: BLURRED,
-                                        fit: FILL,
-                                    )
-                                }
-                            }
-                        }
-                    }
+                    ...PortfolioList
                 }
                 ... on SanityForm {
-                    _key
-                    _type
-                    method
-                    netlify
-                    title
-                    fields {
-                        ... on SanityInput {
-                            _key
-                            _type
-                            label
-                            placeholder
-                            type
-                        }
-                        ... on SanitySubmit {
-                            _key
-                            _type
-                            text
-                        }
-                        ... on SanityTextarea {
-                            _key
-                            _type
-                            label
-                            name
-                            placeholder
-                        }
-                    }
-                    action {
-                        _type
-                        slug {
-                            current
-                        }
-                    }
+                    ...Form
                 }
                 ...on SanityGallery {
-                    _key
-                    _type
-                    columns
-                    images {
-                        _key
-                        caption
-                        alternativeText
-                        asset {
-                            _key
-                            gatsbyImageData(
-                                width: 2000,
-                                placeholder: BLURRED,
-                                fit: FILLMAX,
-                            )                            
-                        }
-                    }
+                    ...Gallery
                 }
             }
         }

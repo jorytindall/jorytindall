@@ -3,13 +3,15 @@ import { graphql } from 'gatsby'
 
 // Components
 import { Layout } from "../../components/layout"
-import { H1 } from "../../components/typography"
+import { ModuleRenderer } from '../../components/moduleRenderer/ModuleRenderer'
+import { PageTitle } from '../../components/pageTitle'
 
 const Music = ({ data }) => {
-    const musicProject = data.musicProject
+    const { title, moduleContent } = data.musicProject
     return (
-        <Layout>
-            <H1>{musicProject.title}</H1>
+        <Layout seo={data.musicProject}>
+            {title && <PageTitle megaTitle={title} />}
+            {moduleContent && <ModuleRenderer modules={moduleContent} />}
         </Layout>
     )
 }
@@ -23,6 +25,20 @@ export const query = graphql`
             id
             slug {
                 current
+            }
+            moduleContent {
+                ... on SanityRichText {
+                    ...RichText
+                }
+                ... on SanityPortfolioList {
+                    ...PortfolioList
+                }
+                ... on SanityForm {
+                    ...Form
+                }
+                ...on SanityGallery {
+                    ...Gallery
+                }
             }
         }
     }

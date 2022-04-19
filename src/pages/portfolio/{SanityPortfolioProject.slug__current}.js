@@ -66,126 +66,17 @@ export const query = graphql`
                 }
             }
             moduleContent {
-                ... on SanityBrandLogoBlock {
-                    _key
-                    _type
+                ... on SanityRichText {
+                    ...RichText
+                }
+                ... on SanityPortfolioList {
+                    ...PortfolioList
                 }
                 ... on SanityForm {
-                    _key
-                    _type
-                    method
-                    netlify
-                    title
-                    fields {
-                        ... on SanityInput {
-                            _key
-                            _type
-                            label
-                            placeholder
-                            type
-                        }
-                        ... on SanitySubmit {
-                            _key
-                            _type
-                            text
-                        }
-                        ... on SanityTextarea {
-                            _key
-                            _type
-                            label
-                            name
-                            placeholder
-                        }
-                    }
-                    action {
-                        _type
-                        slug {
-                            current
-                        }
-                    }
-                }
-                ... on SanityFullWidthImage {
-                    _key
-                    _type
-                    maxHeight
-                    image {
-                    alternativeText
-                    asset {
-                        gatsbyImageData(
-                        fit: FILLMAX
-                        formats: [AUTO, WEBP]
-                        layout: FULL_WIDTH
-                        placeholder: BLURRED
-                        )
-                    }
-                    }
+                    ...Form
                 }
                 ...on SanityGallery {
-                    _key
-                    _type
-                    columns
-                    images {
-                        _key
-                        caption
-                        alternativeText
-                        asset {
-                            _key
-                            gatsbyImageData(
-                                width: 2000,
-                                placeholder: BLURRED,
-                                fit: FILLMAX,
-                            )                            
-                        }
-                    }
-                }
-                ... on SanityImpactBlock {
-                    _key
-                    _type
-                }
-                ... on SanityMainImage {
-                    _key
-                    _type
-                }
-                ... on SanityRichText {
-                    _key
-                    _type
-                    _rawContent(resolveReferences: { maxDepth: 5 })
-                }
-                ... on SanityResults {
-                    _key
-                    _type
-                    title
-                    description
-                    resultItems {
-                        _key
-                        description
-                        headline
-                        metric
-                        percentageDirection
-                    }
-                }
-                ... on SanityFeatures {
-                    _key
-                    _type
-                    columns
-                    title
-                    featureItems {
-                        title
-                        description
-                        _key
-                        image {
-                            alternativeText
-                            caption
-                            asset {
-                                _key
-                                gatsbyImageData(
-                                    width: 2000,
-                                    placeholder: BLURRED,
-                                    fit: FILLMAX,
-                                )
-                            }
-                        }
-                    }
+                    ...Gallery
                 }
             }
         }

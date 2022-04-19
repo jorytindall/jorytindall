@@ -4,12 +4,13 @@ import { Mega, Paragraph } from "../typography"
 import { Arrow } from "../icon"
 
 export function PageTitle({ 
-    title = "Page Title",
-    megaTitle = "Mega title" }) {
+    title,
+    megaTitle 
+}) {
     return (
         <Wrapper>
-            <Paragraph lead>{title} <Arrow direction="right" margin="0 0 0 1rem" /></Paragraph>
-            <Mega>{megaTitle}</Mega>
+            {title && <Paragraph lead>{title} <Arrow direction="right" margin="0 0 0 1rem" /></Paragraph>}
+            {megaTitle && <Mega>{megaTitle}</Mega>}
         </Wrapper>
     )
 }
