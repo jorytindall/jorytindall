@@ -25,6 +25,12 @@ const Serializers = {
         },
         mainImage: ({ node }) => {
             return <InlineImage input={node} key={node._key} />
+        },
+        fileDownload: ({ node }) => {
+            console.log(node)
+            return (
+                <p>Download text here</p>
+            )
         }
     },
     marks: {
@@ -37,7 +43,7 @@ const Serializers = {
             return (
                 <Code data={mark}>{children}</Code>
             )
-        }
+        },
     }
 }
 
