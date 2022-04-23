@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 // Components
 import { Layout }from "../../components/layout"
 import { BlogTitle } from "../../components/blog/BlogTitle"
-import { PortableText } from '../../components/richText'
+import { RichText } from '../../components/richText'
 import { Container } from '../../components/layout'
 
 const Post = ({ data }) => {
@@ -18,7 +18,7 @@ const Post = ({ data }) => {
                 categories={post.categories}
             />
             <Container>
-                {post.content && <PortableText blocks={post.content} />}
+                {post.content._rawContent && <RichText value={post.content} />}
             </Container>
         </Layout>
     )

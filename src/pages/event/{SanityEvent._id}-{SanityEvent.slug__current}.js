@@ -5,7 +5,7 @@ import { formatDateTime } from '../../utils/datetimeFormat'
 import { Layout } from '../../components/layout'
 import { H1, Paragraph } from '../../components/typography'
 import { Container } from '../../components/layout'
-import { PortableText } from '../../components/richText'
+import { RichText } from '../../components/richText'
 import { TextArrow } from '../../components/button'
 
 const Event = ({ data }) => {
@@ -16,7 +16,7 @@ const Event = ({ data }) => {
                 {image && <GatsbyImage image={image.asset.gatsbyImageData} />}
                 {title && <H1>{title}</H1>}
                 {date && <Paragraph>{formatDateTime(date)}</Paragraph>}
-                {description && <PortableText blocks={description} />}
+                {description && <RichText value={description} />}
                 {url && <TextArrow text='More information' link={url} />}
             </Container>
         </Layout>
