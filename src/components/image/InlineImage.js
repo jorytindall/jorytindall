@@ -26,6 +26,6 @@ export const InlineImage = ({ input }) => {
 
 const Wrapper = styled.section`
     margin: 2.5rem 0;
-    grid-column: 1 / 4;
+    /* grid-column: 1 / 4; */
     width: 100%;
 `

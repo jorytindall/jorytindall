@@ -16,18 +16,6 @@ const Components = {
         normal: ({ children }) => <Paragraph primary>{children}</Paragraph>,
         blockquote: ({ children }) => <Blockquote text={children} />
     },
-    codeBlock: ({ value }) => {
-        return <CodeBlock input={value} key={value._key} />
-    },
-    mainImage: ({ value }) => {
-        return <InlineImage input={value} key={value._key} />
-    },
-    fileDownload: ({ value }) => {
-        console.log(value)
-        return (
-            <p>Download text here</p>
-        )
-    },
     marks: {
         internalLink: ({ value, children }) => {
             return (
@@ -37,6 +25,20 @@ const Components = {
         code: ({ value, children }) => {
             return (
                 <Code data={value}>{children}</Code>
+            )
+        },
+    },
+    types: {
+        codeBlock: ({ value }) => {
+            return <CodeBlock input={value} key={value._key} />
+        },
+        mainImage: ({ value }) => {
+            return <InlineImage input={value} key={value._key} />
+        },
+        fileDownload: ({ value }) => {
+            console.log(value)
+            return (
+                <p>Download text here</p>
             )
         },
     }
