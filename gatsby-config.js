@@ -54,6 +54,13 @@ module.exports = {
             options: {
                 siteId: process.env.FATHOM_TRACKING_ID,
             }
+        },
+        {
+            resolve: `@mkitio/gatsby-theme-password-protect`,
+            options: {
+                password: `password`,
+                pagePaths: [ '/portfolio/reenvisioning-design-systems-at-t-mobile' ]
+            }
         }
     ]
 }

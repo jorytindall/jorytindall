@@ -17,6 +17,7 @@
     "url": "https://gitlab.com/jorytindall/jorytindall"
   },
   "dependencies": {
+    "@mkitio/gatsby-theme-password-protect": "^2.1.2",
     "@portabletext/react": "^1.0.6",
     "@sanity/block-content-to-react": "^3.0.0",
     "babel-plugin-prismjs": "^2.1.0",
